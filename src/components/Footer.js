@@ -24,6 +24,9 @@ const Wrapper = styled.div`
   border-color: #1d194a;
   height: 100px;
   background-color: #1d194a;
+  @media (max-width: 560px) {
+    min-width: 560px;
+  }
 `;
 
 const FooterTextContainer = styled.div`

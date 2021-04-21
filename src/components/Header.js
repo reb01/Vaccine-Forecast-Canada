@@ -1,28 +1,47 @@
 import React from "react";
 import styled from "styled-components";
 import logo from "./title.png";
-
+import { useHistory } from "react-router-dom";
 const Header = () => {
+  const history = useHistory();
   return (
-    <Wrapper3>
+    <HeaderWrapper>
       <Logo to="/">
-        <img src={logo} alt="Logo" width="450px" />
+        <Img
+          src={logo}
+          alt="Logo"
+          onClick={() => {
+            history.push("/");
+          }}
+        />
       </Logo>
-    </Wrapper3>
+    </HeaderWrapper>
   );
 };
 
 export default Header;
 
-const Logo = styled.div``;
-const Wrapper3 = styled.div`
+const Logo = styled.div`
+  cursor: pointer;
+  @media (max-width: 510px) {
+  }
+`;
+const Img = styled.img`
+  width: 450px;
+  @media (max-width: 510px) {
+    width: 300px;
+  }
+`;
+const HeaderWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100px;
-  box-sizing: border-box;
-  border-bottom: 1px solid #1d194a;
+  border: 1px solid #1d194a;
   color: white;
   background-color: #1d194a;
+  @media (max-width: 560px) {
+    min-width: 560px;
+  }
 `;

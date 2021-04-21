@@ -264,7 +264,6 @@ const VaccinePage = () => {
                       100
                     ).toFixed(2)}
                     showPercentValue
-                    // percentage={10}
                     stroke={"#db2a16"}
                     strokeWidth={40}
                     background={"#666566"}
@@ -398,7 +397,6 @@ const AllProgressBarWrapper = styled.span`
     flex-direction: column;
     justify-content: center;
     text-align: center;
-
     resize: vertical;
     flex-wrap: nowrap;
   }
@@ -494,6 +492,13 @@ const Wrapper = styled.div`
   width: 90%;
   padding-top: 20px;
   font-size: 20px;
+  @media (max-width: 510px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 450px;
+  }
 `;
 const WrapperPage = styled.div`
   padding-top: 20px;

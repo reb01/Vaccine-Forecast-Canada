@@ -119,6 +119,9 @@ const Wrapper = styled.header`
     width: 22%;
     background-color: #d7e4f7;
   }
+  @media (max-width: 510px) {
+    min-width: 110px;
+  }
 `;
 const Wrapper1 = styled.div`
   display: flex;
@@ -163,6 +166,12 @@ const StyledLink1 = styled(NavLink)`
   }
   @media (max-width: 1200px) {
     font-weight: bold;
+    font-size: 15px;
+    margin: 0 0 0 2px;
+    padding: 0 2px;
+  }
+  @media (max-width: 510px) {
+    font-weight: normal;
     font-size: 15px;
     margin: 0 0 0 2px;
     padding: 0 2px;

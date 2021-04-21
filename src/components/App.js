@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import VaccinePage from "./VaccinePage";
 import Sidebar from "./Sidebar";
 import styled from "styled-components";
+import Home from "./Home";
 import GlobalStyles from "../GlobalStyles";
 
 const App = () => {
@@ -15,6 +16,9 @@ const App = () => {
         <Wrapper2>
           <Sidebar />
           <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
             <Route exact path="/vaccinepage/:province">
               <VaccinePage />
             </Route>
