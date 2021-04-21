@@ -264,6 +264,7 @@ const VaccinePage = () => {
                       100
                     ).toFixed(2)}
                     showPercentValue
+                    //                     percentage={10}
                     stroke={"#db2a16"}
                     strokeWidth={40}
                     background={"#666566"}
