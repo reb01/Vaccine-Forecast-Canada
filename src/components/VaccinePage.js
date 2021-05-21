@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useState, useEffect } from "react";
 import SemiCircleProgressBar from "react-progressbar-semicircle";
 import { makeStyles } from "@material-ui/core/styles";
@@ -299,7 +301,12 @@ const VaccinePage = () => {
                   />
                   <Text>
                     <Bold>50%</Bold> vaccinated in{" "}
-                    <Bold>{daysUntilFiftyPercent.toFixed(0)} days</Bold> on the{" "}
+                    {daysUntilFiftyPercent.toFixed(0) < 0 ? (
+                      <Bold>0 days</Bold>
+                    ) : (
+                      <Bold>{daysUntilFiftyPercent.toFixed(0)} days</Bold>
+                    )}{" "}
+                    on the{" "}
                     <Bold>
                       {moment()
                         .add(daysUntilFiftyPercent.toFixed(0), "days")
@@ -420,7 +427,7 @@ const Text2 = styled.div`
   margin-bottom: 40px;
   color: #666566;
   margin-left: 50px;
-  @media (max-width: 960px) {
+  @media (max-width: 1170px) {
     display: flex;
     margin-left: 0px;
     margin-right: 0px;
